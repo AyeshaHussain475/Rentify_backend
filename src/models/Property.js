@@ -5,6 +5,7 @@ const propertySchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
+      unique: true,
     },
     description: {
       type: String,
@@ -26,6 +27,10 @@ const propertySchema = new mongoose.Schema(
     },
     image: {
       type: String,
+    },
+    contactNumber: {
+      type: String,
+      required: true,
     },
   },
   { timestamps: true }
